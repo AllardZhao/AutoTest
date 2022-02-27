@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<suite name="groupsOnClassTest">
+    <!-- 运行所有 -->
+    <test name="runAll">
+        <classes>
+            <class name="com.course.testng.groups.GroupsOnClass1"/>
+            <class name="com.course.testng.groups.GroupsOnClass2"/>
+            <class name="com.course.testng.groups.GroupsOnClass3"/>
+        </classes>
+    </test>
+
+    <!-- 只想运行部分组 -->
+    <test name="onlyRunStudent">
+        <groups>
+            <run>
+                <!-- 设置运行范围，include是包含什么，name为组名 -->
+                <include name="Student"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.course.testng.groups.GroupsOnClass1"/>
+            <class name="com.course.testng.groups.GroupsOnClass2"/>
+            <class name="com.course.testng.groups.GroupsOnClass3"/>
+        </classes>
+    </test>
+
+</suite>
