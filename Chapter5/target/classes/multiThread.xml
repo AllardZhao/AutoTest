@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 在suite标签下设置parallel类型为方法级别和thread-count线程数 -->
+<suite name="multiThreadTest" parallel="methods" thread-count="2">
+    <!--
+     parallel属性有三个级别，如下：
+        tests级别：不同的test标签下的用例可以在不同的线程下执行，
+                   相同的test标签下的用例只能在同一个线程中去执行。
+        classes级别：相同的class标签下的用例在同一个线程中执行，
+                   不同的class标签下的用例可以在不同的线程中去执行
+        methods级别：所有用例都可以在不同的线程下去执行。(常用)
+      thread-count：表示最大并发线程数。
+      多线程xml文件配置方式，不能指定线程池，只有注解方式中方法上才可以指定线程池。
+     -->
+    <test name="multiThread1">
+        <classes name="demo1">
+            <class name="com.course.testng.multiThread.MultiThreadOnXml"/>
+        </classes>
+    </test>
+
+    <test name="multiThread2">
+        <classes name="demo2">
+            <class name="com.course.testng.multiThread.MultiThreadOnXml"/>
+        </classes>
+    </test>
+
+</suite>

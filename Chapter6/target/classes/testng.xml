@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<suite name="接口测试套件">
+
+    <test name="测试模块">
+        <classes>
+            <class name="com.tester.extend.demo.TestMethodDemo">
+                <!-- 指定测试类中要运行的测试方法 -->
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                    <include name="test3"/>
+                    <include name="logDemo"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!-- 配置监听器,设置用那个类型监听 -->
+    <listeners>
+        <!-- <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter"/> -->
+        <!-- <listener class-name="com.tester.extend.demo.ExtentTestNgIReporterListenerOld"/>-->
+        <listener class-name="com.tester.extend.demo.ExtentTestNgIReporterListener"/>
+    </listeners>
+
+</suite>
