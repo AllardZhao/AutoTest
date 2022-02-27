@@ -1,0 +1,26 @@
+[
+  {
+    "description": "模拟一个没有参数的get请求",
+    "request": {
+      "uri": "/get-no-param",
+      "method": "get"
+    },
+    "response": {
+      "text": "这是一个没有参数的get请求"
+    }
+  },
+  {
+    "description": "模拟一个带参数的get请求",
+    "request": {
+      "uri": "/get-with-param",
+      "method": "get",
+      "queries": {
+        "name": "xiaoKang",
+        "age": "18"
+      }
+    },
+    "response": {
+      "text": "我晓康又回来了"
+    }
+  }
+]
